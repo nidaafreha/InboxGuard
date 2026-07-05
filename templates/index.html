@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InboxGuard - Spam Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a2e;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #16213e;
+            padding: 40px;
+            border-radius: 15px;
+            width: 500px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        h1 { color: #0f3460; font-size: 2em; }
+        h1 span { color: #e94560; }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1em;
+            margin: 20px 0;
+        }
+        button {
+            background: #e94560;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover { background: #c73652; }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.5em;
+            font-weight: bold;
+            background: #0f3460;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inbox<span>Guard</span> 🛡️</h1>
+        <p>Intelligent Email Spam Detection</p>
+        <form action="/predict" method="POST">
+            <textarea name="email" placeholder="Paste your email here...">{{ email or '' }}</textarea>
+            <button type="submit">🔍 Check for Spam</button>
+        </form>
+        {% if result %}
+        <div class="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
