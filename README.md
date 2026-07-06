@@ -1,23 +1,23 @@
-# 🛡️ InboxGuard — Intelligent Email Spam Detection System
+# InboxGuard — Intelligent Email Spam Detection System
 
 A machine learning web application that detects spam emails with 96.68% accuracy.
 
-## 🚀 Live Demo
+## Live Demo
 Type any email content and instantly know if it's spam or not!
 
-## 🧠 How It Works
+## How It Works
 - Uses **Naive Bayes** algorithm with **TF-IDF** vectorization
 - Trained on 5,000+ real emails
 - Achieves **96.68% accuracy**
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Python** — core programming language
 - **Scikit-learn** — machine learning
 - **Flask** — web framework
 - **NLTK** — natural language processing
 - **HTML/CSS** — frontend interface
 
-## ⚙️ How to Run
+## How to Run
 1. Clone the repository
 2. Install dependencies:
 
@@ -30,12 +30,12 @@ python src/train.py
 python src/app.py
 5. Open browser: http://127.0.0.1:5000
 
-## 📊 Model Performance
+## Model Performance
 | Metric | Score |
 |--------|-------|
 | Accuracy | 96.68% |
 | Algorithm | Naive Bayes |
 | Dataset | SMS Spam Collection |
 
-## 👩‍💻 Developer
+## Developer
 Built by Nida as an independent portfolio project.
